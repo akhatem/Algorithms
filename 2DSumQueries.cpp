@@ -9,12 +9,12 @@ int sumRange(int k, int l, int i, int j, std::vector<std::vector<int>> &S){
 }
 
 void accumSum2D(){
-    for(int i = 0; i < (int)A.size(); i++)
+    for(int i = 1; i < (int)A.size(); i++)
         for(int j = 1; j < (int)A[0].size(); j++)
             A[i][j] += A[i][j-1];
 
-    for(int i = 1; i < (int)A.size(); i++)
-        for(int j = 0; j < (int)A[0].size(); j++)
+    for(int i = 1; i < (int)A[0].size(); i++)
+        for(int j = 1; j < (int)A.size(); j++)
             A[i][j] += A[i-1][j];
 
     /*for(int i = 0; i < (int) A.size(); i++){
